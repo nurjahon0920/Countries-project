@@ -4,18 +4,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Countries project</title>
-    <link rel="stylesheet" href="./scss/style.css">
+    <link rel="stylesheet" href="./scss/style.css" />
   </head>
   <body>
     <header>
-      <h3>Where in the world?</h3>
-      <button>
-        <img src="./images/moon.svg" alt="Dark Mode">
-        <p>Dark Mode</p>
-      </button>
-    </header>
-    <main>
-      <div class="cards" id="cards"></div>
-    </main>
+      <div class="container">
+        <h3>Where in the world?</h3>
+        <button onclick="myFunction()" class="Dark">
+          <img src="./images/moon.svg" alt="Dark Mode" />
+          <p>Dark Mode</p>
+        </button>
+      </div>
+      </header>
+      <main>
+        <div class="container">
+          <div class="main-top">
+            <form name="Search" class="search-Nation">
+              <img src="./images/search-icon.svg" id="Search" alt="Search" />
+              <input
+                type="search"
+                placeholder="Search for a country…" />
+            </form>
+            <span class="input-State-text">
+              <select class="form-select States-filter"></select>
+            </span>
+          </div>
+          <div class="cards" id="cards"></div>
+        </div>
+      </main>
+    </div>
+    <script src="./js/main.js"></script>
+    <script>
+      function myFunction() {
+         var element = document.body;
+         element.classList.toggle("dark-mode");
+      }
+      </script>
   </body>
 </html>
