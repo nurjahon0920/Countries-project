@@ -16,10 +16,10 @@ button {
   color: #fff;
   background-color: #2b3844;
 }
-.dark-mode header {
+.dark-mode header, .dark-mode a {
   background-color: #2b3844;
 }
-.dark-mode header .container .Dark {
+.dark-mode header .container .Dark, .dark-mode a .container .Dark {
   background-color: transparent;
 }
 .dark-mode main {
@@ -29,8 +29,8 @@ button {
 .dark-mode .card-text {
   background-color: #2b3844;
 }
-.dark-mode .search-Nation,
-.dark-mode .input-State-text {
+.dark-mode input,
+.dark-mode .States-filter {
   background-color: #2b3844;
 }
 .dark-mode h1,
@@ -57,7 +57,6 @@ body header {
   position: fixed;
   right: 0;
   left: 0;
-  margin: 0 auto;
   text-align: center;
   padding: 23px 0 23px 80px;
   background-color: #fff;
@@ -66,30 +65,27 @@ body header {
 }
 body header .container {
   display: flex;
-  width: 1280px;
-  padding: 0 50px 0 45px;
   justify-content: space-between;
+  padding: 0 50px 0 45px;
 }
 body header .container .Dark {
   display: flex;
-  background-color: white;
-  border: none;
   align-items: center;
   gap: 10px;
+  border: none;
+  background-color: white;
 }
 body main {
   background-color: #fafafa;
 }
 body main .container {
-  margin: 0 auto;
   padding-top: 71px;
-  width: 1280px;
 }
 body main .container .main-top {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   margin-bottom: 48px;
+  margin-top: 30px;
 }
 body main .container .main-top .search-Nation {
   display: flex;
@@ -97,7 +93,7 @@ body main .container .main-top .search-Nation {
   max-width: 480px;
 }
 body main .container .main-top .search-Nation img {
-  transform: translateX(65px);
+  transform: translateX(45px);
 }
 body main .container .main-top .search-Nation input {
   padding: 18px 271px 18px 62px;
@@ -106,10 +102,10 @@ body main .container .main-top .search-Nation input {
   border-radius: 5px;
   border: none;
 }
-body main .container .main-top .input-State-text {
+body main .container .main-top .States-filter {
   max-width: 200px;
 }
-body main .container .main-top .input-State-text .States-filter {
+body main .container .main-top .States-filter .States-select {
   background-color: #fff;
   box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.0549019608);
   padding: 18px;
@@ -120,18 +116,22 @@ body main .container .main-top .input-State-text .States-filter {
 body main .container .cards {
   display: flex;
   flex-wrap: wrap;
+  gap: 74px;
   width: 1280px;
-  gap: 50px;
 }
 body main .container .cards .card {
   box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.031372549);
   background-color: #fff;
   border-radius: 5px;
+  max-width: 264px;
+  width: 100%;
+  box-sizing: border-box;
 }
 body main .container .cards .card img {
   border-radius: 5px 5px 0 0;
-  bottom: 0;
+  max-width: 264px;
   width: 100%;
+  height: 160px;
 }
 body main .container .cards .card-text {
   padding: 24px 0 36px 24px;
@@ -157,14 +157,12 @@ body main .container .cards .card-text span {
   }
   body .container {
     max-width: 343px;
-    margin: 0 auto;
     padding: 0 16px;
   }
   body header {
     margin-bottom: 80px;
   }
   body header .container {
-    display: flex;
     position: fixed;
     padding: 30px 16px 30px 0;
     left: 32px;
@@ -177,10 +175,10 @@ body main .container .cards .card-text span {
   }
   body header .container .Dark {
     display: flex;
-    background-color: white;
-    border: none;
     align-items: center;
     gap: 10px;
+    background-color: white;
+    border: none;
   }
   body header .container .Dark p {
     font-size: 12px;
@@ -193,15 +191,14 @@ body main .container .cards .card-text span {
     background-color: #fafafa;
   }
   body main .container {
-    margin: 0 auto;
     padding-top: 71px;
     max-width: 343px;
   }
   body main .container .main-top {
     display: flex;
     flex-direction: column;
-    margin-bottom: 48px;
     align-items: start;
+    margin-bottom: 48px;
   }
   body main .container .main-top .search-Nation {
     display: flex;
@@ -217,10 +214,10 @@ body main .container .cards .card-text span {
     border: none;
     background-color: transparent;
   }
-  body main .container .main-top .input-State-text {
+  body main .container .main-top .States-filter {
     max-width: 200px;
   }
-  body main .container .main-top .input-State-text .States-filter {
+  body main .container .main-top .States-filter .States-select {
     background-color: #fff;
     box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.0549019608);
     padding: 18px;

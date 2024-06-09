@@ -13,7 +13,7 @@ button {
 .dark-mode {
   color: #fff;
   background-color: #2b3844;
-  header {
+  header,a{
     background-color: #2b3844;
     .container {
       .Dark {
@@ -25,11 +25,11 @@ button {
     background-color: #202c36;
   }
   .card,
-  .card-text {
+  .card-text{
     background-color: #2b3844;
   }
-  .search-Nation,
-  .input-State-text {
+  input,
+  .States-filter{
     background-color: #2b3844;
   }
   h1,
@@ -47,7 +47,6 @@ button {
 body {
   transition: background 0.3s all linear;
   font-family: NunitoSans;
-  //   max-width: 1440px;
   .container {
     max-width: 1280px;
     margin: 0 auto;
@@ -57,45 +56,39 @@ body {
     position: fixed;
     right: 0;
     left: 0;
-    margin: 0 auto;
     text-align: center;
-    // max-width: 1440px;
     padding: 23px 0 23px 80px;
     background-color: #fff;
     width: 100%;
     margin-bottom: 70px;
     .container {
       display: flex;
-      width: 1280px;
-      padding: 0 50px 0 45px;
       justify-content: space-between;
+      padding: 0 50px 0 45px;
       .Dark {
         display: flex;
-        background-color: white;
-        border: none;
         align-items: center;
         gap: 10px;
+        border: none;
+        background-color: white;
       }
     }
   }
   main {
     background-color: #fafafa;
     .container {
-      margin: 0 auto;
       padding-top: 71px;
-      width: 1280px;
       .main-top {
         display: flex;
-        align-items: center;
         justify-content: space-between;
         margin-bottom: 48px;
+        margin-top: 30px;
         .search-Nation {
           display: flex;
           align-items: center;
-          //   gap: 24px;
           max-width: 480px;
           img {
-            transform: translateX(65px);
+            transform: translateX(45px);
           }
           input {
             padding: 18px 271px 18px 62px;
@@ -105,9 +98,9 @@ body {
             border: none;
           }
         }
-        .input-State-text {
+        .States-filter{
           max-width: 200px;
-          .States-filter {
+          .States-select {
             background-color: #fff;
             box-shadow: 0px 2px 9px 0px #0000000e;
             padding: 18px;
@@ -120,16 +113,21 @@ body {
       .cards {
         display: flex;
         flex-wrap: wrap;
+        gap: 74px;
         width: 1280px;
-        gap: 50px;
         .card {
           box-shadow: 0px 0px 7px 2px #00000008;
           background-color: #fff;
           border-radius: 5px;
+          // padding: 5px;
+          max-width: 264px;
+          width: 100%;
+          box-sizing: border-box;
           img {
             border-radius: 5px 5px 0 0;
-            bottom: 0;
+            max-width: 264px;
             width: 100%;
+            height: 160px;
           }
           &-text {
             padding: 24px 0 36px 24px;
@@ -151,39 +149,22 @@ body {
   }
 }
 
-//
-
-//
-
-//
-
-//
-
-//
-
-//
-
-//
 @media (max-width: 375px) {
   body {
     transition: background 0.3s ease-in;
     font-family: NunitoSans;
     background-color: white;
     color: black;
-    // width: 600px;
     .container {
       max-width: 343px;
-      margin: 0 auto;
       padding: 0 16px;
     }
     header {
       margin-bottom: 80px;
       .container {
-        display: flex;
         position: fixed;
         padding: 30px 16px 30px 0;
         left: 32px;
-
         justify-content: space-between;
         background-color: #fff;
         max-width: 343px;
@@ -192,10 +173,10 @@ body {
         }
         .Dark {
           display: flex;
-          background-color: white;
-          border: none;
           align-items: center;
           gap: 10px;
+          background-color: white;
+          border: none;
           p {
             font-size: 12px;
           }
@@ -209,14 +190,13 @@ body {
     main {
       background-color: #fafafa;
       .container {
-        margin: 0 auto;
         padding-top: 71px;
         max-width: 343px;
         .main-top {
           display: flex;
           flex-direction: column;
-          margin-bottom: 48px;
           align-items: start;
+          margin-bottom: 48px;
           .search-Nation {
             display: flex;
             align-items: center;
@@ -231,9 +211,9 @@ body {
               background-color: transparent;
             }
           }
-          .input-State-text {
+          .States-filter {
             max-width: 200px;
-            .States-filter {
+            .States-select {
               background-color: #fff;
               box-shadow: 0px 2px 9px 0px #0000000e;
               padding: 18px;
@@ -273,3 +253,16 @@ body {
     }
   }
 }
+
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
