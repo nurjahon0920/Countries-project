@@ -1,10 +1,3 @@
-// const body = document.body;
-// const btnLightDark = document.getElementById("light-dark");
-// function handleLightDark() {
-//   body.classList.toggle("dark");
-// }
-// btnLightDark.addEventListener("click", handleLightDark);
-
 function myFunction() {
   let element = querySelector(".cards");
   element.classList.toggle("dark-mode");
