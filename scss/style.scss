@@ -13,7 +13,8 @@ button {
 .dark-mode {
   color: #fff;
   background-color: #2b3844;
-  header,a{
+  header,
+  a {
     background-color: #2b3844;
     .container {
       .Dark {
@@ -25,11 +26,11 @@ button {
     background-color: #202c36;
   }
   .card,
-  .card-text{
+  .card-text {
     background-color: #2b3844;
   }
   input,
-  .States-filter{
+  .States-filter {
     background-color: #2b3844;
   }
   h1,
@@ -43,7 +44,6 @@ button {
     color: #fff;
   }
 }
-
 body {
   transition: background 0.3s all linear;
   font-family: NunitoSans;
@@ -98,7 +98,7 @@ body {
             border: none;
           }
         }
-        .States-filter{
+        .States-filter {
           max-width: 200px;
           .States-select {
             background-color: #fff;
@@ -148,7 +148,6 @@ body {
     }
   }
 }
-
 @media (max-width: 375px) {
   body {
     transition: background 0.3s ease-in;
@@ -253,11 +252,6 @@ body {
     }
   }
 }
-
-
-//
-
-//
 
 //
 

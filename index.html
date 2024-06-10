@@ -1,41 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Countries Project</title>
     <link rel="stylesheet" href="./scss/style.css" />
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div class="container">
-            <h3>Where in the world?</h3>
-            <button onclick="myFunction()" class="Dark">
-                <img src="./images/moon.svg" alt="Dark Mode" />
-                <p>Dark Mode</p>
-            </button>
-        </div>
+      <div class="container">
+        <h3>Where in the world?</h3>
+        <button onclick="myFunction()" class="Dark">
+          <img src="./images/moon.svg" alt="Dark Mode" />
+          <p>Dark Mode</p>
+        </button>
+      </div>
     </header>
     <main>
-        <div class="container">
-            <div class="main-top">
-                <form name="Search" class="search-Nation">
-                    <img src="./images/search-icon.svg" id="Search" alt="Search" />
-                    <input type="search" placeholder="Search for a country…" />
-                </form>
-                <span class="filter-container States-filter">
-                    <select class="States-select"></select>
-                </span>
-            </div>
-            <div class="cards" id="cards"></div>
+      <div class="container">
+        <div class="main-top">
+          <form name="Search" class="search-Nation">
+            <img src="./images/search-icon.svg" id="Search" alt="Search" />
+            <input type="search" placeholder="Search for a country…" />
+          </form>
+          <span class="filter-container States-filter">
+            <select class="States-select"></select>
+          </span>
         </div>
+        <div class="cards" id="cards"></div>
+      </div>
     </main>
     <script src="./js/main.js"></script>
     <script>
-        function myFunction() {
-            var element = document.body;
-            element.classList.toggle("dark-mode");
-        }
+      function myFunction() {
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+      }
     </script>
-</body>
+  </body>
 </html>

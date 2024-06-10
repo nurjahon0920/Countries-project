@@ -16,10 +16,12 @@ button {
   color: #fff;
   background-color: #2b3844;
 }
-.dark-mode header, .dark-mode a {
+.dark-mode header,
+.dark-mode a {
   background-color: #2b3844;
 }
-.dark-mode header .container .Dark, .dark-mode a .container .Dark {
+.dark-mode header .container .Dark,
+.dark-mode a .container .Dark {
   background-color: transparent;
 }
 .dark-mode main {
