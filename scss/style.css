@@ -16,12 +16,15 @@ button {
   color: #fff;
   background-color: #2b3844;
 }
+.dark-mode #details-page a {
+  background-color: #2b3844;
+  color: #fff;
+}
 .dark-mode header,
 .dark-mode a {
   background-color: #2b3844;
 }
-.dark-mode header .container .Dark,
-.dark-mode a .container .Dark {
+.dark-mode .container .Dark {
   background-color: transparent;
 }
 .dark-mode main {
@@ -60,6 +63,7 @@ body header {
   right: 0;
   left: 0;
   text-align: center;
+  z-index: 1000;
   padding: 23px 0 23px 80px;
   background-color: #fff;
   width: 100%;
@@ -74,10 +78,12 @@ body header .container .Dark {
   display: flex;
   align-items: center;
   gap: 10px;
+  transform: translateX(78px);
   border: none;
   background-color: white;
 }
 body main {
+  padding-bottom: 100px;
   background-color: #fafafa;
 }
 body main .container {
@@ -93,6 +99,7 @@ body main .container .main-top .search-Nation {
   display: flex;
   align-items: center;
   max-width: 480px;
+  transform: translateX(-18px);
 }
 body main .container .main-top .search-Nation img {
   transform: translateX(45px);
@@ -103,9 +110,11 @@ body main .container .main-top .search-Nation input {
   background-color: #fff;
   border-radius: 5px;
   border: none;
+  outline: none;
 }
 body main .container .main-top .States-filter {
   max-width: 200px;
+  transform: translateX(77px);
 }
 body main .container .main-top .States-filter .States-select {
   background-color: #fff;
@@ -114,6 +123,7 @@ body main .container .main-top .States-filter .States-select {
   border: none;
   border-radius: 5px;
   color: #111517;
+  outline: none;
 }
 body main .container .cards {
   display: flex;
@@ -128,12 +138,14 @@ body main .container .cards .card {
   max-width: 264px;
   width: 100%;
   box-sizing: border-box;
+  cursor: pointer;
 }
 body main .container .cards .card img {
   border-radius: 5px 5px 0 0;
   max-width: 264px;
   width: 100%;
-  height: 160px;
+  height: 100%;
+  height: 47.619%;
 }
 body main .container .cards .card-text {
   padding: 24px 0 36px 24px;
@@ -238,6 +250,8 @@ body main .container .cards .card-text span {
   }
   body main .container .cards .card img {
     border-radius: 5px 5px 0 0;
+    max-width: 264px;
+    width: 100%;
   }
   body main .container .cards .card-text {
     padding: 24px 0 46px 24px;
@@ -253,4 +267,39 @@ body main .container .cards .card-text span {
   body main .container .cards .card-text span {
     font-weight: bold;
   }
+}
+#details-page header {
+  margin-bottom: 20px;
+}
+#details-page a {
+  text-decoration: none;
+  color: black;
+  margin-top: 20px;
+  font-size: 20px;
+  left: 0;
+  margin-left: 10px;
+  margin-bottom: 100px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: white;
+  transition: 0.5s;
+  box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.2941176471);
+}
+#details-page #details {
+  margin-top: 20px;
+}
+#details-page #details .card {
+  display: flex;
+  gap: 120px;
+}
+#details-page #details .card .details-img {
+  border-radius: 5px;
+  max-width: 650px;
+  width: 100%;
+}
+#details-page #details .card .card-text {
+  margin-top: 130px;
+}
+#details-page #details .card .card-text h3 {
+  font-size: 32px;
 }/*# sourceMappingURL=style.css.map */

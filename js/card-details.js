@@ -7,36 +7,35 @@ async function getCountryDetails(code) {
     console.error("Error fetching country details:", error);
   }
 }
-
 document.addEventListener("DOMContentLoaded", async () => {
   let params = new URLSearchParams(window.location.search);
   let countryCode = params.get("code");
   let details = document.getElementById("details");
   if (countryCode) {
     let country = await getCountryDetails(countryCode);
+    console.log(country);
     if (country) {
       details.innerHTML = `
                 <div class="card">
-                    <img src="${country.flags.svg}" alt="flag of ${
+                    <img src="${
+                      country.flags.svg
+                    }" class="details-img" alt="flag of ${
         country.name.common
       }" />
                     <div class="card-text">
-                        <h3>Country: ${country.name.common}</h3>
-                        <p><strong>Population:</strong> ${country.population.toLocaleString()}</p>
-                        <p><strong>Region:</strong> ${country.region}</p>
-                        <p><strong>Capital:</strong> ${
+                        <h3>${country.name.common}</h3>
+                        <p><b>Population:</b> ${country.population.toLocaleString()}</p>
+                        <p><b>Region:</b> ${country.region}</p>
+                        <p><b>Subregion:</b> ${country.subregion}</p>
+                        <p><b>Capital:</b> ${
                           country.capital ? country.capital[0] : "N/A"
                         }</p>
-                        <p><strong>Subregion:</strong> ${country.subregion}</p>
-                        <p><strong>Languages:</strong> ${Object.values(
-                          country.languages
-                        ).join(", ")}</p>
-                        <p><strong>Borders:</strong> ${
+                        <p><b>Borders Countries:</b> ${
                           country.borders ? country.borders.join(", ") : "N/A"
                         }</p>
-                        <p><strong>Timezones:</strong> ${country.timezones.join(
-                          ", "
-                        )}</p>
+                        <p><b>Languages:</b> ${Object.values(
+                          country.languages
+                        ).join(", ")}</p>
                     </div>
                 </div>
             `;

@@ -2,6 +2,7 @@ async function getAllPosts() {
   try {
     let response = await fetch("https://restcountries.com/v3.1/all");
     let posts = await response.json();
+    console.log(posts);
     return posts;
   } catch (error) {
     console.error("Error fetching all posts:", error);
@@ -39,14 +40,15 @@ document.addEventListener("DOMContentLoaded", async () => {
       card.classList.add("card");
       card.dataset.postId = country.cca3;
       card.innerHTML = `
+        
               <img src="${country.flags.svg}" alt="flag of ${
         country.name.common
       }" />
               <div class="card-text">
                   <h3>${country.name.common}</h3>
-                  <p><strong>Population:</strong> ${country.population.toLocaleString()}</p>
-                  <p><strong>Region:</strong> ${country.region}</p>
-                  <p><strong>Capital:</strong> ${
+                  <p><b>Population:</b> ${country.population.toLocaleString()}</p>
+                  <p><b>Region:</b> ${country.region}</p>
+                  <p><b>Capital:</b> ${
                     country.capital ? country.capital[0] : "N/A"
                   }</p>
               </div>
@@ -72,9 +74,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     let region = StatesSelect.value;
     let filteredCountries = allCountries.filter(
       (country) =>
-        (country.name.common.toLowerCase().includes(search) ||
-          (country.capital &&
-            country.capital[0].toLowerCase().includes(search))) &&
+        country.name.common.toLowerCase().includes(search) &&
         (region === "all" || country.region === region)
     );
     displayProducts(filteredCountries);
@@ -83,14 +83,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   StatesSelect.addEventListener("change", filterCountries);
   await loadPosts();
 });
-
-//
-
-//
-
-//
-
-//
 
 function myFunction() {
   var element = document.body;
